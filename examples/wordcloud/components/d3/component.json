@@ -1,0 +1,9 @@
+{
+  "name": "angular-d3",
+  "version": "0.0.1",
+  "dependencies": {
+      "angular": "~1.0.5"
+  },
+  "devDependencies": {
+  }
+}
