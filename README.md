@@ -54,7 +54,7 @@ Attributes:
 ```
 
 ```javascript
-$scope.words = ["Hallo","Test","Lorem","Ipsum","Lorem","ipsum","dolor"];
+$scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","then","the","first"];
 ```
 
 
