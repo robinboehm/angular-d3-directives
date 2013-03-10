@@ -1,8 +1,4 @@
 'use strict';
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
-};
 
 module.exports = function (grunt) {
     // load all grunt tasks
@@ -35,14 +31,7 @@ module.exports = function (grunt) {
             ]
         },
         concat: {
-            dist: {
-                files: {
-                    '<%= yeoman.dist %>/scripts/scripts.js': [
-                        '.tmp/scripts/*.js',
-                        '<%= yeoman.app %>/scripts/*.js'
-                    ]
-                }
-            }
+            // Done via index.html for correct order
         },
         useminPrepare: {
             html: '<%= yeoman.app %>/index.html',
@@ -67,9 +56,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.dist %>/scripts',
+                        cwd: '<%= yeoman.dist %>',
                         src: '*.js',
-                        dest: '<%= yeoman.dist %>/scripts'
+                        dest: '<%= yeoman.dist %>'
                     }
                 ]
             }
@@ -77,8 +66,8 @@ module.exports = function (grunt) {
         uglify: {
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/scripts/<%= yeoman.name %>.min.js': [
-                        '<%= yeoman.dist %>/scripts/<%= yeoman.name %>.min.js'
+                    '<%= yeoman.dist %>/<%= yeoman.name %>.min.js': [
+                        '<%= yeoman.dist %>/<%= yeoman.name %>.min.js'
                     ]
                 }
             }
@@ -130,7 +119,7 @@ module.exports = function (grunt) {
         'cdnify',
         'usemin',
         'ngmin'
-        //'uglify'
+        //,'uglify'
     ]);
 
     grunt.registerTask('default', ['build']);
