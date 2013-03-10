@@ -67,6 +67,7 @@ $scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","th
 ```
 
 Output
+
 ![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
 
 
