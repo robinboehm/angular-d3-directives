@@ -60,7 +60,7 @@ Attributes:
 $scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","then","the","first"];
 ```
 
-![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
+![alt text](https://github.com/robinboehm/angular-d3/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
 
 
 ## Development
