@@ -63,7 +63,7 @@ $scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","th
 ![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
 
 
-## Develop
+## Development
 
 To install local dependencies you need to run the install task of npm / bower. 
 
