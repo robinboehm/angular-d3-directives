@@ -42,6 +42,13 @@ Word cloud layout by Jason Davies, http://www.jasondavies.com/word-cloud/
 Algorithm due to Jonathan Feinberg, http://static.mrfeinberg.com/bv_ch03.pdf
 
 
+Attributes:
+*   <b>width</b>         <i>Number</i>
+*   <b>height</b>        <i>Number</i>
+*   <b>font-family</b>   <i>String</i>
+*   <b>font-size</b>     <i>String</i>
+*   <b>words</b>         <i>Array.<string></i>
+
 ```html
 <wordcloud words="words" font-size="10" font-family="Arial"></wordcloud>
 ```
@@ -50,11 +57,6 @@ Algorithm due to Jonathan Feinberg, http://static.mrfeinberg.com/bv_ch03.pdf
 $scope.words = ["Hallo","Test","Lorem","Ipsum","Lorem","ipsum","dolor"];
 ```
 
-```javascript
-angular.module('d3')
-  .directive('wordcloud', function (d3){
-  // use d3 
-  }
-);
-```
+
+![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
 
