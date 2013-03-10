@@ -42,24 +42,29 @@ Feel free to contribute extensions, fixes or own directives.
 
 ###Word-Cloud Directive
 
-Word cloud layout by Jason Davies, http://www.jasondavies.com/word-cloud/
+I've used the word cloud layout by [Jason Davies](http://www.jasondavies.com/word-cloud/)
+and used the [decorator pattern](http://docs.angularjs.org/api/AUTO.$provide#decorator) to mixin the cloud layout
+into the d3 service.
 
+After that i've created a directive that enable the configuration over folliwing attributes:
 
-Attributes:
 *   <b>width</b>         <i>Number</i>
 *   <b>height</b>        <i>Number</i>
 *   <b>font-family</b>   <i>String</i>
 *   <b>font-size</b>     <i>String</i>
 *   <b>words</b>         <i>Array.<string></i>
 
-```html
+Html Template
+```html 
 <wordcloud words="words" font-size="10" font-family="Arial"></wordcloud>
 ```
 
+Controller
 ```javascript
 $scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","then","the","first"];
 ```
 
+Output
 ![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
 
 
