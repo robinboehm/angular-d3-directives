@@ -1,11 +1,11 @@
 angular-d3
 ==================
 
-Create directives to enable even more easy usage of d3!
+Create [directives](http://docs.angularjs.org/guide/directive) to enable even more easy usage of [d3](http://d3js.org/) by [Mike Bostock](https://github.com/mbostock/d3)!
 
 ##D3 AngularJS Module
 
-D3 component to provide d3 as module for the injector.
+D3 component to provide d3 as module for the [injector](http://docs.angularjs.org/api/AUTO.$injector).
 Registerd as <b>d3</b>.
 
 Include component as every other component via script tag into your webapp.
@@ -15,13 +15,15 @@ Include component as every other component via script tag into your webapp.
 <script src="components/d3/angular-d3.js"></script>
 ```
 
-Add d3 module to the requires Array.
+Add d3 module to the [requires Array](http://docs.angularjs.org/api/angular.module).
 
 ```javascript
 angular.module('exampleApp', ['d3']);
 ```
 
-Now you can inject the d3 module e.g. in a directive definition and enjoy the full power of d3 in a isolated scope.
+Now you can inject the d3 module e.g. in a directive definition 
+and enjoy the full power of d3 in a isolated scope without usage of the d3 in a global var.
+
 
 ```javascript
 angular.module('d3')
