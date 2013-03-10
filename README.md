@@ -1,6 +1,8 @@
 angular-d3
 ==================
 
+Create directives to enable even more easy usage of d3!
+
 ##D3 AngularJS Module
 
 D3 component to provide d3 as module for the injector.
