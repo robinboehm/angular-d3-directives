@@ -2,7 +2,7 @@ node_modules
 .idea
 *.iml
 
-build
+#build
 .tmp
 .sass-cache
 app/components
