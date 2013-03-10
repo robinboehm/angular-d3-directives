@@ -35,6 +35,9 @@ angular.module('d3')
 With d3 directives you are able to create wonderful html extensions
 that enable people with basic javascript experience to create d3 visualisations.
 
+I will publish here directives that come with my projects iam working on.
+Feel free to contribute extensions, fixes or own directives.
+
 ###Word-Cloud Directive
 
 Word cloud layout by Jason Davies, http://www.jasondavies.com/word-cloud/
@@ -57,6 +60,12 @@ Attributes:
 $scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","then","the","first"];
 ```
 
-
 ![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
+
+## Todo
+
+* improve build process
+  * include the current d3 release, currently just pasted
+* finish tests for the wordcloud directive, just notes now
+* Implement more directives
 
