@@ -62,10 +62,26 @@ $scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","th
 
 ![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
 
+
+## Develop
+
+To install local dependencies you need to run the install task of npm / bower. 
+
+```shell
+npm install && bower install
+```
+
+To build the module you need to run the grunt with default task
+
+```shell
+grunt
+```
+
 ## Todo
 
 * improve build process
   * include the current d3 release, currently just pasted
+  * solve warning in the build
 * finish tests for the wordcloud directive, just notes now
 * Implement more directives
 
