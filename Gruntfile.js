@@ -7,7 +7,8 @@ module.exports = function (grunt) {
     // configurable paths
     var yeomanConfig = {
         app: 'app',
-        dist: 'build'
+        dist: 'build',
+        name: "angular-d3"
     };
 
     try {
@@ -67,7 +68,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     '<%= yeoman.dist %>/<%= yeoman.name %>.min.js': [
-                        '<%= yeoman.dist %>/<%= yeoman.name %>.min.js'
+                        '<%= yeoman.dist %>/<%= yeoman.name %>.js'
                     ]
                 }
             }
@@ -118,8 +119,8 @@ module.exports = function (grunt) {
         'copy',
         'cdnify',
         'usemin',
-        'ngmin'
-        //,'uglify'
+        'ngmin',
+        'uglify'
     ]);
 
     grunt.registerTask('default', ['build']);
