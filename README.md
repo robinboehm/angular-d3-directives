@@ -1,6 +1,8 @@
 angular-d3
 ==================
 
+Create directives to enable even more easy usage of d3!
+
 ##D3 AngularJS Module
 
 D3 component to provide d3 as module for the injector.
@@ -35,26 +37,51 @@ angular.module('d3')
 With d3 directives you are able to create wonderful html extensions
 that enable people with basic javascript experience to create d3 visualisations.
 
+I will publish here directives that come with my projects iam working on.
+Feel free to contribute extensions, fixes or own directives.
+
 ###Word-Cloud Directive
 
 Word cloud layout by Jason Davies, http://www.jasondavies.com/word-cloud/
 
-Algorithm due to Jonathan Feinberg, http://static.mrfeinberg.com/bv_ch03.pdf
 
+Attributes:
+*   <b>width</b>         <i>Number</i>
+*   <b>height</b>        <i>Number</i>
+*   <b>font-family</b>   <i>String</i>
+*   <b>font-size</b>     <i>String</i>
+*   <b>words</b>         <i>Array.<string></i>
 
 ```html
 <wordcloud words="words" font-size="10" font-family="Arial"></wordcloud>
 ```
 
 ```javascript
-$scope.words = ["Hallo","Test","Lorem","Ipsum","Lorem","ipsum","dolor"];
+$scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","then","the","first"];
 ```
 
-```javascript
-angular.module('d3')
-  .directive('wordcloud', function (d3){
-  // use d3 
-  }
-);
+![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
+
+
+## Development
+
+To install local dependencies you need to run the install task of npm / bower. 
+
+```shell
+npm install && bower install
 ```
+
+To build the module you need to run the grunt with default task
+
+```shell
+grunt
+```
+
+## Todo
+
+* improve build process
+  * include the current d3 release, currently just pasted
+  * solve warning in the build
+* finish tests for the wordcloud directive, just notes now
+* Implement more directives
 
