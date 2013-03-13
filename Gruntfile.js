@@ -1,5 +1,10 @@
 'use strict';
 
+var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+var mountFolder = function (connect, dir) {
+    return connect.static(require('path').resolve(dir));
+};
+
 module.exports = function (grunt) {
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').concat(['gruntacular']).forEach(grunt.loadNpmTasks);
@@ -30,6 +35,39 @@ module.exports = function (grunt) {
                 'Gruntfile.js',
                 '<%= yeoman.app %>/scripts/{,*/}*.js'
             ]
+        },
+        connect: {
+            livereload: {
+                options: {
+                    port: 9000,
+                    // Change this to '0.0.0.0' to access the server from outside.
+                    hostname: 'localhost',
+                    middleware: function (connect) {
+                        return [
+                            lrSnippet,
+                            mountFolder(connect, '.tmp'),
+                            mountFolder(connect, yeomanConfig.app)
+                        ];
+                    }
+                }
+            },
+            test: {
+                options: {
+                    port: 9000,
+                    middleware: function (connect) {
+                        return [
+                            mountFolder(connect, '.tmp'),
+                            mountFolder(connect, 'test')
+                        ];
+                    }
+                }
+            }
+        },
+        testacular: {
+            unit: {
+                configFile: 'testacular.conf.js',
+                singleRun: true
+            }
         },
         concat: {
             // Done via index.html for correct order
@@ -106,8 +144,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', [
         'clean:server',
-        'coffee',
-        'compass',
         'connect:test',
         'testacular'
     ]);
