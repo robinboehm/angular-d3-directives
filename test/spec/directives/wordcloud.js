@@ -9,7 +9,7 @@ describe('Directive: wordcloud', function () {
     var element,
         mockArray=["1","2","3","4","5"]; // TODO: Using testacular mock mechanisms
 
-    it('should not not create a svg with an empty wordcloud words attribute', inject(function ($rootScope, $compile) {
+    it('should not not create a svg with an empty words definition', inject(function ($rootScope, $compile) {
         element = angular.element('<wordcloud></wordcloud>');
         element = $compile(element)($rootScope);
         expect(element.children().children().length).toBe(0);
@@ -70,5 +70,23 @@ describe('Directive: wordcloud', function () {
 
         var subelement = element.children().children().children()[0];
         expect(angular.element(subelement).css("font-family")).toBe('Impact');
+    }));
+
+
+    it('should parse string value to wordCloud', inject(function ($rootScope, $compile) {
+        $rootScope.words = mockArray;
+        element = angular.element('<wordcloud>Hello,World</wordcloud>');
+        element = $compile(element)($rootScope);
+
+        expect(element.children().children().children().length).toBe(2);
+    }));
+
+
+    it('should parse subelements to wordCloud', inject(function ($rootScope, $compile) {
+        $rootScope.words = mockArray;
+        element = angular.element('<wordcloud><word>Hello</word><word>Javascript</word><word>World</word></wordcloud>');
+        element = $compile(element)($rootScope);
+
+        expect(element.children().children().children().length).toBe(2);
     }));
 });
