@@ -79,6 +79,8 @@ describe('Directive: wordcloud', function () {
         element = $compile(element)($rootScope);
 
         expect(element.children().children().children().length).toBe(2);
+        <!-- Delete forget to delete Strings after render -->
+        expect(element.children().length).toBe(1);
     }));
 
 
@@ -88,5 +90,7 @@ describe('Directive: wordcloud', function () {
         element = $compile(element)($rootScope);
 
         expect(element.children().children().children().length).toBe(2);
+        <!-- Dont forget to delete word elements after render -->
+        expect(element.children().length).toBe(1);
     }));
 });
