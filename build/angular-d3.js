@@ -6531,8 +6531,18 @@ angular.module('d3').directive('wordcloud', [
           fontSize = attrs.fontSize * 1 || 0;
         if (angular.isDefined(scope.words))
           words = scope.words;
-        if (!angular.isArray(words)) {
-          element.text('wordcloud: words attribute should be an array');
+        if (angular.isDefined(scope.words) && angular.isArray(words)) {
+          words = scope.words;
+        } else if (angular.element(element).find('word').length > 0) {
+          var subelements = angular.element(element).find('word');
+          words = [];
+          angular.forEach(subelements, function (word) {
+            words.push(angular.element(word).text());
+          });
+        } else if (element.text().length > 0) {
+          words = element.text().split(',');
+        } else {
+          element.text('wordcloud: Please define some words');
           return;
         }
         if (!angular.isNumber(fontSize) || fontSize <= 0) {
