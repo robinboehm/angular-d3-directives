@@ -92,4 +92,5 @@ grunt
   * solve warning in the build
 * finish tests for the wordcloud directive, just notes now
 * Implement more directives
+* Set up a font for every word node
 
