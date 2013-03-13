@@ -41,8 +41,22 @@ angular.module('d3')
 
           //TODO: Refactor String to a service
           // Skip rendering when no corrent word param is parsed
-          if(!angular.isArray(words)){
-              element.text("wordcloud: words attribute should be an array");
+          if(angular.isDefined(scope.words) && angular.isArray(words)){
+              words   = scope.words
+          }
+          else if(angular.element(element).find("word").length>0){
+              var subelements = angular.element(element).find("word");
+              words = [];
+              angular.forEach(subelements,function(word){
+                  words.push(angular.element(word).text());
+              });
+          }
+          else if(element.text().length > 0){
+              words = element.text().split(",");
+
+          }
+          else{
+              element.text("wordcloud: Please define some words");
               return;
           }
           // Font-Size Param wrong
