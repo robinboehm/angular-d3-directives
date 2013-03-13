@@ -33,7 +33,7 @@ angular.module('d3')
           if(angular.isDefined(attrs.width))        width           = attrs.width;
           if(angular.isDefined(attrs.height))       height          = attrs.height;
           if(angular.isDefined(attrs.fontFamily))   fontFamily      = attrs.fontFamily;
-          if(angular.isDefined(attrs.fontSize))     fontSize        = attrs.fontSize * 1 || 0; // Form to Number
+          if(angular.isDefined(attrs.fontSize))     fontSize        = attrs.fontSize * 1 || 0; // !parseInt, detect wrong input
 
           // Check Scope
           if(angular.isDefined(scope.words))    words   = scope.words;
