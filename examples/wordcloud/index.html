@@ -5,6 +5,17 @@
   </head>
   <body ng-app="examplesApp">
     <!-- Add your site or application content here -->
+
+    <!-- Without need of js code-->
+    <h1>WordCloud D3 Directive</h1>
+    <h2>By Robin Böhm</h2>
+
+    <h3>Simple Words as String</h3>
+    <wordcloud>This,is,a,test,with,Strings</wordcloud>
+    <h3>Simple Words Subelements</h3>
+    <wordcloud><word>Subelement</word><word>Test</word></wordcloud>
+
+    <!-- With JS Array inside of an Controller -->
     <div class="container" ng-view></div>
 
     <!-- Scripts -->

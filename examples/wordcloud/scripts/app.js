@@ -6,11 +6,7 @@ angular.module('examplesApp', ['d3'])
       .when('/', {
             // Only for example in the route provider
         template: '' +
-            '' +
-            '<h1>WordCloud D3 Directive</h1>' +
-            '<h2>By Robin Böhm</h2>' +
-            '' +
-            '<h3>Simple Words</h3>' +
+            '<h3>Simple Words as Array</h3>' +
             '<wordcloud words="words"></wordcloud>' +
             '<h3>Adjustable size</h3>' +
             '<wordcloud words="words" width="300" height="300"></wordcloud>' +
