@@ -23,7 +23,7 @@ angular.module('d3')
           var width             =   800;
           var height            =   400;
           var fontFamily        =   "Impact";
-          var fontSize          =   20;
+          var fontSize          =   30;
           var words;
 
           // Check and set attributes, else keep then default values
@@ -68,7 +68,7 @@ angular.module('d3')
               var fill = d3.scale.category20();
               d3.layout.cloud().size([width, height])
                   .words(words.map(function(d) {
-                      return {text: d, size: fontSize + Math.random() * fontSize*10};
+                      return {text: d, size: fontSize + Math.random() * fontSize};
                   }))
                   .rotate(function() { return ~~(Math.random() * 2) * 90; })
                   .font(fontFamily)
