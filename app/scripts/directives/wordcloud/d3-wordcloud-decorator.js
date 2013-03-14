@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('d3')
-  .config( function ($provide) {
+  .config( ['$provide', function ($provide) {
 
         var d3WorldCloudDecorator = function($delegate){
 
@@ -431,4 +431,4 @@ angular.module('d3')
         };
 
         $provide.decorator('d3', d3WorldCloudDecorator);
-  });
+  }]);

@@ -1,10 +1,7 @@
 'use strict';
 
 angular.module('d3')
-  .directive('wordcloud', function (
-        // TODO: Create a d3 Service and inject
-        d3
-        ) {
+  .directive('wordcloud', ['d3',function (d3) {
     return {
       restrict: 'E',
         scope:{
@@ -110,4 +107,4 @@ angular.module('d3')
           cloudFactory(words);
       }
     };
-  });
+  }]);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('examplesApp', ['d3'])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider',function ($routeProvider) {
     $routeProvider
       .when('/', {
             // Only for example in the route provider
@@ -18,4 +18,4 @@ angular.module('examplesApp', ['d3'])
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
