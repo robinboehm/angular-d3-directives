@@ -46,10 +46,12 @@ angular.module('d3')
               words = [];
               angular.forEach(subelements,function(word){
                   words.push(angular.element(word).text());
+                  word.remove();
               });
           }
           else if(element.text().length > 0){
               words = element.text().split(",");
+              element.text("");
 
           }
           else{

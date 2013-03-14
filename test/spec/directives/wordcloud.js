@@ -74,23 +74,33 @@ describe('Directive: wordcloud', function () {
 
 
     it('should parse string value to wordCloud', inject(function ($rootScope, $compile) {
-        $rootScope.words = mockArray;
         element = angular.element('<wordcloud>Hello,World</wordcloud>');
         element = $compile(element)($rootScope);
 
         expect(element.children().children().children().length).toBe(2);
-        <!-- Delete forget to delete Strings after render -->
-        expect(element.children().length).toBe(1);
+    }));
+
+    it('should delete Strings inside after compile', inject(function ($rootScope, $compile) {
+        element = angular.element('<wordcloud>Hello,World</wordcloud>');
+        element = $compile(element)($rootScope);
+
+        element.children().remove();
+        expect(element.text()).toBe("");
     }));
 
 
     it('should parse subelements to wordCloud', inject(function ($rootScope, $compile) {
-        $rootScope.words = mockArray;
         element = angular.element('<wordcloud><word>Hello</word><word>Javascript</word><word>World</word></wordcloud>');
         element = $compile(element)($rootScope);
 
-        expect(element.children().children().children().length).toBe(2);
-        <!-- Dont forget to delete word elements after render -->
+        expect(element.children().children().children().length).toBe(3);
+    }));
+
+
+    it('should delete subelements after compile', inject(function ($rootScope, $compile) {
+        element = angular.element('<wordcloud><word>Hello</word><word>Javascript</word><word>World</word></wordcloud>');
+        element = $compile(element)($rootScope);
+
         expect(element.children().length).toBe(1);
     }));
 });
