@@ -9555,7 +9555,7 @@ angular.module('d3').directive('wordcloud', [
               size: Math.random() * fontSize
             };
           })).rotate(function () {
-            return ~~(Math.random() * 2) * 90;
+            return ~~(Math.random() * 2) * -90;
           }).font(fontFamily).fontSize(function (d) {
             return d.size;
           }).on('end', draw).start();
@@ -9576,6 +9576,8 @@ angular.module('d3').directive('wordcloud', [
               return d.text;
             }).on('click', function (d) {
               scope.onClick({ element: d });
+            }).on('mouseover', function (d) {
+              scope.onHover({ element: d });
             });
           }
         };
