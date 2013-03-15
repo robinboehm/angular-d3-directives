@@ -58,7 +58,14 @@ After that i've created a directive that enable the configuration over folliwing
 *   <b>on-click</b>      <i>Function</i>
 *   <b>on-hover</b>      <i>Function</i>
 
-#### Option 1 : Html Template
+
+#### Option 1 : Comma seperated list
+```html 
+<wordcloud>This,is,a,test,with,Strings</wordcloud>
+```
+
+
+#### Option 2 : Html Template
 ```html 
 <wordcloud>
   <word>This</word>
