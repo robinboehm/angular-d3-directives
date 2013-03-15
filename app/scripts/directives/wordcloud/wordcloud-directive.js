@@ -46,7 +46,7 @@ angular.module('d3')
               words = [];
               angular.forEach(subelements,function(word){
                   words.push(angular.element(word).text());
-                  word.remove();
+                  angular.element(word).remove();
               });
           }
           else if(element.text().length > 0){
