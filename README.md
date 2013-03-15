@@ -54,7 +54,6 @@ After that i've created a directive that enable the configuration over folliwing
 *   <b>height</b>        <i>Number</i>
 *   <b>font-family</b>   <i>String</i>
 *   <b>font-size</b>     <i>String</i>
-*   
 *   <b>words</b>         <i>Array.<string></i>
 *   <b>on-click</b>      <i>Function</i>
 *   <b>on-hover</b>      <i>Function</i>
