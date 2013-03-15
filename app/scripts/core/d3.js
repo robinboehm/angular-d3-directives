@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('d3')
-  .factory('d3', ['d3', function () {
+  .factory('d3', [function () {
             var d3;
             var π = Math.PI, ε = 1e-6, d3 = {
                 version: "3.0.8"
