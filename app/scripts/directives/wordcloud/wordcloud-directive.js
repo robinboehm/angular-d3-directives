@@ -21,9 +21,9 @@ angular.module('d3')
       link: function postLink(scope, element, attrs) {
           // Default Values
           var width             =   800;
-          var height            =   400;
+          var height            =   600;
           var fontFamily        =   "Impact";
-          var fontSize          =   30;
+          var fontSize          =   100;
           var words;
 
           // Check and set attributes, else keep then default values

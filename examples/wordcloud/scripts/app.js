@@ -11,7 +11,7 @@ angular.module('examplesApp', ['d3'])
             '<h3>Adjustable size</h3>' +
             '<wordcloud words="words" width="300" height="300"></wordcloud>' +
             '<h3>Font-Family and -Size attributes</h3>' +
-            '<wordcloud words="words" font-size="10" font-family="Arial"></wordcloud>' +
+            '<wordcloud words="words" font-size="50" font-family="Arial"></wordcloud>' +
             '',
         controller: 'MainCtrl'
       })
