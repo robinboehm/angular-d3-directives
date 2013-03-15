@@ -9508,9 +9508,9 @@ angular.module('d3').directive('wordcloud', [
       },
       link: function postLink(scope, element, attrs) {
         var width = 800;
-        var height = 400;
+        var height = 600;
         var fontFamily = 'Impact';
-        var fontSize = 30;
+        var fontSize = 100;
         var words;
         if (angular.isDefined(attrs.width))
           width = attrs.width;
@@ -9550,7 +9550,7 @@ angular.module('d3').directive('wordcloud', [
           ]).words(words.map(function (d) {
             return {
               text: d,
-              size: fontSize + Math.random() * fontSize
+              size: Math.random() * fontSize
             };
           })).rotate(function () {
             return ~~(Math.random() * 2) * 90;
