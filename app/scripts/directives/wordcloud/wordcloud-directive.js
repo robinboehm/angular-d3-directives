@@ -12,11 +12,11 @@ angular.module('d3')
             fontSize: "@",
 
             // Bindings
-            words: "="
+            words: "=",
 
             // EventCallbacks
-            // Todo: &onClick -> Callback when clicking on a text element
-            // Todo: &onHover -> Callback when hover over a text element
+            onClick: "&",
+            onHover: "&"
         },
       link: function postLink(scope, element, attrs) {
           // Default Values
@@ -101,7 +101,10 @@ angular.module('d3')
                       .attr("transform", function(d) {
                           return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
                       })
-                      .text(function(d) { return d.text; });
+                      .text(function(d) { return d.text; })
+                      .on("click",function(d){
+                          scope.onClick({element: d});
+                      });
               }
           };
 

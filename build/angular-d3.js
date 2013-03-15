@@ -9504,7 +9504,9 @@ angular.module('d3').directive('wordcloud', [
         height: '@',
         fontFamily: '@',
         fontSize: '@',
-        words: '='
+        words: '=',
+        onClick: '&',
+        onHover: '&'
       },
       link: function postLink(scope, element, attrs) {
         var width = 800;
@@ -9572,6 +9574,8 @@ angular.module('d3').directive('wordcloud', [
               ] + ')rotate(' + d.rotate + ')';
             }).text(function (d) {
               return d.text;
+            }).on('click', function (d) {
+              scope.onClick({ element: d });
             });
           }
         };
