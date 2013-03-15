@@ -72,7 +72,7 @@ angular.module('d3')
                   .words(words.map(function(d) {
                       return {text: d, size: Math.random() * fontSize};
                   }))
-                  .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                  .rotate(function() { return ~~(Math.random() * 2) * -90; })
                   .font(fontFamily)
                   .fontSize(function(d) { return d.size; })
                   .on("end", draw)
