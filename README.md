@@ -54,19 +54,51 @@ After that i've created a directive that enable the configuration over folliwing
 *   <b>height</b>        <i>Number</i>
 *   <b>font-family</b>   <i>String</i>
 *   <b>font-size</b>     <i>String</i>
+*   
 *   <b>words</b>         <i>Array.<string></i>
+*   <b>on-click</b>      <i>Function</i>
+*   <b>on-hover</b>      <i>Function</i>
 
-Html Template
+#### Option 1 : Html Template
 ```html 
-<wordcloud words="words" font-size="10" font-family="Arial"></wordcloud>
+<wordcloud>
+  <word>This</word>
+  <word>is</word>
+  <word>a</word>
+  <word>Subelement</word>
+  <word>Test</word>
+  <word>for</word>
+  <word>demonstrating</word>
+  <word>this</word>
+  <word>Feature</word>
+</wordcloud>
 ```
 
-Controller
+
+#### Option 2 : Using Controller Scope
 ```javascript
-$scope.words = ["This","is","a","d3","wordcloud","with","much","more","text","then","the","first"];
+$scope.words =
+        ["Hallo","Test","Lorem","Ipsum","Lorem","ipsum","dolor","sit","amet,","consetetur","sadipscing","elitr,","sed","diam","nonumy","eirmod","tempor","invidunt","ut","labore","et","dolore","magna","aliquyam","erat,","sed","diam"];
+
+        $scope.myOnClickFunction = function(element){
+            console.log("click",element);
+        }
+
+        $scope.myOnHoverFunction = function(element){
+            console.log("hover",element);
+        }
 ```
 
-Output
+```html
+<wordcloud 
+  words="words" 
+  on-click="myOnClickFunction(element)" 
+  on-hover="myOnHoverFunction(element)">
+  
+</wordcloud>
+```
+
+####Output
 
 ![alt text](https://github.com/robinboehm/angular-d3-directives/blob/master/examples/wordcloud/wordcloud.png?raw=true "Wordcloud Example")
 
