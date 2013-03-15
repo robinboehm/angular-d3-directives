@@ -70,7 +70,7 @@ angular.module('d3')
               var fill = d3.scale.category20();
               d3.layout.cloud().size([width, height])
                   .words(words.map(function(d) {
-                      return {text: d, size: fontSize + Math.random() * fontSize};
+                      return {text: d, size: Math.random() * fontSize};
                   }))
                   .rotate(function() { return ~~(Math.random() * 2) * 90; })
                   .font(fontFamily)
