@@ -104,6 +104,9 @@ angular.module('d3')
                       .text(function(d) { return d.text; })
                       .on("click",function(d){
                           scope.onClick({element: d});
+                      })
+                      .on("mouseover",function(d){
+                          scope.onHover({element: d});
                       });
               }
           };
