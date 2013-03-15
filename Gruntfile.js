@@ -155,8 +155,8 @@ module.exports = function (grunt) {
         'copy',
         'cdnify',
         'usemin',
-        'ngmin',
-        'uglify'
+        'ngmin'
+        //'uglify'
     ]);
 
     grunt.registerTask('default', ['build']);
