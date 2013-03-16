@@ -81,7 +81,7 @@ After that i've created a directive that enable the configuration over folliwing
 ```
 
 
-#### Option 2 : Using Controller Scope
+#### Option 3 : Using Controller Scope
 ```javascript
 $scope.words =
         ["Hallo","Test","Lorem","Ipsum","Lorem","ipsum","dolor","sit","amet,","consetetur","sadipscing","elitr,","sed","diam","nonumy","eirmod","tempor","invidunt","ut","labore","et","dolore","magna","aliquyam","erat,","sed","diam"];
