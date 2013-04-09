@@ -65,9 +65,13 @@ angular.module('d3')
           }
 
           // CloudFactory - so high in the sky ;)
+          // Keep the anonym functions here for readability
           var cloudFactory = function(words){
-              // Keep the anonym functions here for readability
+
+
+              // TODO: Add fill Function Binding for own function
               var fill = d3.scale.category20();
+
               d3.layout.cloud().size([width, height])
                   .words(words.map(function(d) {
                       return {text: d, size: Math.random() * fontSize};
