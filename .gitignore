@@ -1,3 +1,8 @@
+dist
+.tmp
+.sass-cache
+app/components
+
 node_modules
 .idea
 components
