@@ -7,6 +7,7 @@ angular.module('d3')
 
             // http://bl.ocks.org/mbostock/1483226
             // https://github.com/d3/d3-plugins/tree/master/horizon
+            // https://github.com/square/cubism/wiki/Horizon
             var d3 = $delegate;
             (function() {
                 d3.horizon = function() {
@@ -200,9 +201,10 @@ angular.module('d3')
                         : function(d) { return (d < 0 ? "scale(1,-1)" : "") + "translate(0," + (d - bands) * h + ")"; };
                 }
 
-            });
+            })();
             return d3;
         };
+
 
         $provide.decorator('d3', d3HorizonChartDecorator);
   }]);
