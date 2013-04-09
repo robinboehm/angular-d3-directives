@@ -30,6 +30,9 @@ describe('Directive: wordcloud', function () {
         expect(element.children().children().children().length).toBe(mockArray.length);
     }));
 
+
+    //TODO: Behaviour not 100% correct. Some-times test fails.
+    // Operations with random -> improve test for this
     it('should use the font-size attribute', inject(function ($rootScope, $compile) {
         $rootScope.words = mockArray;
         var element1,element2,subelement1,subelement2;
@@ -37,7 +40,7 @@ describe('Directive: wordcloud', function () {
         element1 = $compile(element1)($rootScope);
         subelement1 = element1.children().children().children()[0];
 
-        element2 = angular.element('<wordcloud words="words" font-size="20"></wordcloud>');
+        element2 = angular.element('<wordcloud words="words" font-size="40"></wordcloud>');
         element2 = $compile(element2)($rootScope);
         subelement2 = element2.children().children().children()[0];
 
