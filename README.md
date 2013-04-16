@@ -66,5 +66,6 @@ grunt
   * solve warning in the build
 * finish tests for the wordcloud directive, just notes now
 * Implement more directives
+    * Dynamic Ajax Wordcloud (Use Blacklist for words from here https://github.com/mlarocca/Chrome-Extensions/blob/master/TagCloudChromeEx/src/js/app/common_vars.js ) 
 * Set up a font for every word node
 
