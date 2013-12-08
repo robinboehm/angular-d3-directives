@@ -69,3 +69,7 @@ grunt
     * Dynamic Ajax Wordcloud (Use Blacklist for words from here https://github.com/mlarocca/Chrome-Extensions/blob/master/TagCloudChromeEx/src/js/app/common_vars.js ) 
 * Set up a font for every word node
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/robinboehm/angular-d3-directives/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
