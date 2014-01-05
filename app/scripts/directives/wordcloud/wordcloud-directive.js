@@ -103,7 +103,7 @@ angular.module('d3')
                       .style("fill", function(d, i) { return fill(i); })
                       .attr("text-anchor", "middle")
                       .attr("transform", function(d) {
-                          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                          return "translate(" + [d.x, d.y] + ") rotate(" + d.rotate + ")";
                       })
                       .text(function(d) { return d.text; })
                       .on("click",function(d){
