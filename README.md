@@ -1,7 +1,7 @@
 angular-d3
 ==================
 
-Blogpost about this project: http://spiiice.net/using-angularjs-and-d3-to-create-a-wordcloud-directive
+Blogpost about this project: http://angularjs.de/artikel/angularjs-d3-wordcloud
 
 Create [directives](http://docs.angularjs.org/guide/directive) to enable even more easy usage of [d3](http://d3js.org/) by [Mike Bostock](https://github.com/mbostock/d3)!
 
