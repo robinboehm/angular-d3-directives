@@ -1,6 +1,6 @@
 'use strict';
 angular.module('d3', []);
-'use strict';
+
 angular.module('d3').factory('d3', [function () {
     var d3;
     var π = Math.PI, ε = 0.000001, d3 = { version: '3.0.8' }, d3_radians = π / 180, d3_degrees = 180 / π, d3_document = document, d3_window = window;
@@ -9127,7 +9127,7 @@ angular.module('d3').factory('d3', [function () {
     };
     return d3;
   }]);
-'use strict';
+;
 angular.module('d3').config([
   '$provide',
   function ($provide) {
@@ -9493,7 +9493,7 @@ angular.module('d3').config([
     $provide.decorator('d3', d3WorldCloudDecorator);
   }
 ]);
-'use strict';
+;
 angular.module('d3').directive('wordcloud', [
   'd3',
   function (d3) {
@@ -9586,7 +9586,7 @@ angular.module('d3').directive('wordcloud', [
     };
   }
 ]);
-'use strict';
+;
 angular.module('d3').config([
   '$provide',
   function ($provide) {
@@ -9754,7 +9754,7 @@ angular.module('d3').config([
     $provide.decorator('d3', d3HorizonChartDecorator);
   }
 ]);
-'use strict';
+;
 angular.module('d3').directive('horizonChart', [
   'd3',
   function (d3) {

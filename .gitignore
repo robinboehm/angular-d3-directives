@@ -1,8 +1,7 @@
 node_modules
-.idea
-*.iml
-
-#build
+dist
 .tmp
 .sass-cache
-app/components
+app/bower_components
+/.project
+/.settings
