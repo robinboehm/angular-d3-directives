@@ -46,12 +46,12 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
 
-    plugins: ['karma-jasmine', 'karma-chrome-launcher'],
+    plugins: ['karma-jasmine', 'karma-firefox-launcher'],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: true
   });
 };
