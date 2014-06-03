@@ -1,6 +1,8 @@
 angular-d3
 ==================
 
+[![Build Status](https://travis-ci.org/robinboehm/angular-d3-directives.svg?branch=master)](https://travis-ci.org/robinboehm/angular-d3-directives)
+
 Blogpost about this project: http://spiiice.net/using-angularjs-and-d3-to-create-a-wordcloud-directive
 
 Create [directives](http://docs.angularjs.org/guide/directive) to enable even more easy usage of [d3](http://d3js.org/) by [Mike Bostock](https://github.com/mbostock/d3)!

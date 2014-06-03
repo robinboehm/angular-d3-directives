@@ -177,8 +177,7 @@ module.exports = function (grunt) {
             steps: {
               js: ['concat', 'uglifyjs'],
               css: ['cssmin']
-            },
-            post: {}
+            }
           }
         }
       }
