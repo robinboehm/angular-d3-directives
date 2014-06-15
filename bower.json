@@ -1,5 +1,5 @@
 {
-  "name": "d3",
+  "name": "angular-d3",
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.15",
