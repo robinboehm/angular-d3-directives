@@ -9506,7 +9506,8 @@ angular.module('d3').directive('wordcloud', [
         fontSize: '@',
         words: '=',
         onClick: '&',
-        onHover: '&'
+        onHover: '&',
+        colors: '='
       },
       link: function postLink(scope, element, attrs) {
         var width = 800;
@@ -9546,6 +9547,13 @@ angular.module('d3').directive('wordcloud', [
         }
         var cloudFactory = function (words) {
           var fill = d3.scale.category20();
+          if (angular.isDefined(colors)) {
+              try {
+                  fill = d3.scale.ordinal().range(colors);
+              } catch(err){
+                 fill = d3.scale.category20();
+              }
+          }
           d3.layout.cloud().size([
             width,
             height
@@ -9581,7 +9589,7 @@ angular.module('d3').directive('wordcloud', [
             });
           }
         };
-        cloudFactory(words);
+        cloudFactory(words, scope.colors);
       }
     };
   }
